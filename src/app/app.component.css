@@ -42,3 +42,10 @@
     opacity: 0.5;
     z-index: -1;
 }
+
+.wave{
+    position: absolute;
+    z-index: -1;
+    top: 850px;
+    left: 0.0001220703125px;
+}

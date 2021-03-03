@@ -55,7 +55,7 @@
 .leftCard{
     background-color: white;
     border-radius: 10px;
-    width: 350px;
+    width: 400px;
     box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.2);
 
 }
@@ -181,3 +181,10 @@ font-family: 'Montserrat', sans-serif;
 /* .formContainer > .title{
     font-size: 13px;
 } */
+
+.range{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #999999;
+}

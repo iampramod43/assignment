@@ -8,7 +8,20 @@
     margin: 20px;
 }
 .main:hover{
-    background-image: url('https://github.com/iampramod43/assignment/blob/main/src/assets/Rectangle%202.svg');
+    background-color: transparent;
+    background: #9F62C9;
+    transition: 0.5s;
+    opacity: 0.3;
+}
+.main:hover > .title{
+    color: white;
+}
+.main:hover > .description{
+    color: white;
+}
+
+.main:hover > .icon{
+    opacity: 1;
 }
 .icon{
     width: 90px;

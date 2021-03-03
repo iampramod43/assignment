@@ -10,16 +10,19 @@
                         <p>Monthly Income</p>
                     </div>
                     <div class="value">
-                        &#x20b9; {{value}}
+                        &#x20b9; {{value | number: '1.0-0'}}
                     </div>
                     <mat-slider min="100000" max="300000" (input)="value = $event.value" [value]="value" class="slider"></mat-slider>
+                    <div class="range">
+                        <span>&#x20b9; 100000</span><span>&#x20b9; 300000</span>
+                    </div>
                 </div>
                 <div class="sliderContainer">
                     <div class="title">
                         <p>Monthly Expense</p>
                     </div>
                     <div class="value">
-                        &#x20b9; {{expense}}
+                        &#x20b9; {{expense | number: '1.0-0'}}
                     </div>
                     <mat-slider min="10000" max="100000" (input)="expense = $event.value" [value]="expense" class="slider"></mat-slider>
                 </div>
@@ -29,8 +32,8 @@
                     </div>
                     <mat-form-field>
                         <mat-select name="tenure" [(ngModel)]="ten">
-                          <mat-option *ngFor="let tenure of tenures" [value]="tenure" >
-                            {{tenure}}
+                          <mat-option *ngFor="let tenure of tenures" [value]="ten" (onSelectionChange)="handleSelect(tenure, $event);">
+                            {{tenure}} Months
                           </mat-option>
                         </mat-select>
                       </mat-form-field>
@@ -48,7 +51,7 @@
                         <p>EMI of existing loan(optional)</p>
                     </div>
                     <mat-form-field>
-                        <input matInput value="">
+                        <input matInput value="&#x20b9; 10000">
                       </mat-form-field>
                 </div>
             </div>
@@ -59,11 +62,11 @@
             </div>
             <div class="container">
                 <p class="title">Loan Amount</p>
-                <p class="value">&#x20b9; {{value - expense}}</p>
+                <p class="value">&#x20b9; {{(value - expense) > 0 ? ((value - expense) | number: '1.0-0') : 0}}</p>
             </div>
             <div class="container">
                 <p class="title">Your EMI will be</p>
-                <p class="value">&#x20b9; {{(value - expense) / ten}}</p>
+                <p class="value">&#x20b9; {{((value - expense) / tenureValue) > 0 ? (((value - expense) / tenureValue) | number: '1.0-0') : 0}}</p>
             </div>
             <div class="button">
                 <button mat-button class="getMoney">Get Money</button>
