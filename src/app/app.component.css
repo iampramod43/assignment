@@ -1,29 +1,44 @@
 .appBody{
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .leftCircle{
     position: absolute;
     top: 160px;
     left: -179px;
-    width: 571px;
-    height: 572px;
+    width: 500px;
+    height: 500px;
     z-index: -1;
 }
 
 .rightCircle{
-    /* position: absolute;
-    top: -30%;
-    right: 0%;
-    width: 700px;
-    height: 700px;
-    z-index: -1; */
-    top: -227.9068603515625px;
-left: 852px;
-width: 1183px;
-height: 1192px;
-transform: matrix(0.12, -0.99, 0.99, 0.12, 0, 0);
-position: absolute;
+    top: -25%;
+    left: 35%;
+    width: 71%;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.leftDots{
+    top: 565px;
+    left: 300px;
+    width: 265px;
+    height: 70px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+}
+.rightDots{
+    top: 650px;
+    left: 900px;
+    width: 265px;
+    height: 70px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
 }

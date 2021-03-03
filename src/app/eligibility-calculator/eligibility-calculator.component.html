@@ -1,0 +1,77 @@
+<div class="main">
+    <div class="cardSection">
+        <div class="leftCard">
+            <div class="header">
+                <p>Eligibility Calculator</p>
+            </div>
+            <div class="body">
+                <div class="sliderContainer">
+                    <div class="title">
+                        <p>Monthly Income</p>
+                    </div>
+                    <div class="value">
+                        &#x20b9; {{value}}
+                    </div>
+                    <mat-slider min="100000" max="300000" (input)="value = $event.value" [value]="value" class="slider"></mat-slider>
+                </div>
+                <div class="sliderContainer">
+                    <div class="title">
+                        <p>Monthly Expense</p>
+                    </div>
+                    <div class="value">
+                        &#x20b9; {{expense}}
+                    </div>
+                    <mat-slider min="10000" max="100000" (input)="expense = $event.value" [value]="expense" class="slider"></mat-slider>
+                </div>
+                <div class="formContainer">
+                    <div class="title">
+                        <p>Repayment Tenure</p>
+                    </div>
+                    <mat-form-field>
+                        <mat-select name="tenure" [(ngModel)]="ten">
+                          <mat-option *ngFor="let tenure of tenures" [value]="tenure" >
+                            {{tenure}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="toggleContainer">
+                    <div class="title">
+
+                        <p>Do you have any existing loans?</p>
+                    </div>
+                    <mat-slide-toggle></mat-slide-toggle>
+                </div>
+                <div class="existingLoan">
+                    <div class="title">
+
+                        <p>EMI of existing loan(optional)</p>
+                    </div>
+                    <mat-form-field>
+                        <input matInput value="">
+                      </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="rightCard">
+            <div class="svg">
+                <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6B389D" fill-opacity="1" d="M0,128L30,144C60,160,120,192,180,197.3C240,203,300,181,360,192C420,203,480,245,540,229.3C600,213,660,139,720,133.3C780,128,840,192,900,181.3C960,171,1020,85,1080,69.3C1140,53,1200,107,1260,154.7C1320,203,1380,245,1410,266.7L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+            </div>
+            <div class="container">
+                <p class="title">Loan Amount</p>
+                <p class="value">&#x20b9; {{value - expense}}</p>
+            </div>
+            <div class="container">
+                <p class="title">Your EMI will be</p>
+                <p class="value">&#x20b9; {{(value - expense) / ten}}</p>
+            </div>
+            <div class="button">
+                <button mat-button class="getMoney">Get Money</button>
+            </div>
+            <!-- <svg class="bottomSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L48,160C96,128,192,64,288,37.3C384,11,480,21,576,58.7C672,96,768,160,864,197.3C960,235,1056,245,1152,224C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> -->
+            <div class="svg">
+                <svg class="bottomSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520"><path fill="#6B389D" fill-opacity="1" d="M0,32L40,80C80,128,160,224,240,256C320,288,400,256,480,256C560,256,640,288,720,272C800,256,880,192,960,176C1040,160,1120,192,1200,213.3C1280,235,1360,245,1400,250.7L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            </div>
+        </div>
+    </div>
+</div>

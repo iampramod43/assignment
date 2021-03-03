@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .main{
-    overflow: auto;
     display: flex;
-}
-.titleContainer{
-    width: 407px;
-    height: 98px;
-    top: 200px;
-    left: 150px;
-    position: absolute;
+    height: auto;
+    justify-content: space-between;
+    padding: 0px 8%;
+    margin-top: 30px;
 }
 
+
 .titleContainer > p{
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
+.titleContainer{
+    padding: 100px 10px 0px 30px;
+
+}
+
 .line{
-    width: 55%;
+    width: 50%;
 }
 
 
@@ -28,10 +30,21 @@
     width: 400px;
     height: 200px;
     object-fit: contain;
-    top: 100px;
+    margin-top: 50px;
 }
 
 .left{
     display: flex;
     flex-direction: column;
+    flex: 0.3;
+    align-items: center;
+}
+
+.top{
+    flex: 0.5;
+}
+
+.right{
+    align-items: center;
+    flex: 0.4;
 }
