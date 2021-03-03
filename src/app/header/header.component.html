@@ -1,4 +1,4 @@
-<div class="headerSection">
+<div class="headerSection" [class.headerChange]="headerChange">
     <div class="left">
         <img src="assets/logo@2x.png" alt="" class="logo">
     </div>
@@ -6,7 +6,7 @@
         <p>Products</p>
         <p>Solutions</p>
         <p>Pricing</p>
-        <button mat-stroked-button class="login" (click)="click();">Login</button>
+        <button mat-stroked-button class="login">Login</button>
         <button mat-button class="getStarted">Get Started</button>
     </div>
 </div>
