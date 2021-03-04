@@ -11,13 +11,10 @@ export class AppComponent {
 
     @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
-    // this.headerChange = true;
-    console.log('window>>', this.headerChange);
      if (window.pageYOffset > 50) {
       this.headerChange = true;
      } else {
       this.headerChange = false;
-      console.log('window>>', window.pageYOffset);
      }
   }
 }

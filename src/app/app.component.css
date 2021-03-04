@@ -70,6 +70,8 @@
     top: 0;
     z-index: 999;
     width: 100%;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
 }
 
 .logo{

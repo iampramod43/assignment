@@ -6,11 +6,13 @@
     height: 200px;
     padding: 20px;
     margin: 20px;
+
+    transition-timing-function: ease-in;
+    transition: 0.5s;
 }
 .main:hover{
     background-color: transparent;
     background: #9F62C9;
-    transition: 0.5s;
     opacity: 0.3;
 }
 .main:hover > .title{

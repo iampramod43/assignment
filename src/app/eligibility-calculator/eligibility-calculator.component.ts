@@ -27,7 +27,6 @@ export class EligibilityCalculatorComponent implements OnInit {
       this.ten = value + "Months";
       this.loan = Math.round(this.value - this.expense);
       this.emi = Math.round((this.value - this.expense) / this.tenureValue);
-      console.log("ten>>>", this.loan, this.emi);
     }
   }
 }
