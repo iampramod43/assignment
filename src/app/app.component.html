@@ -1,5 +1,6 @@
-<div class="appBody">
-        <div class="background">
+<div class="appBody" (scroll)="onWindowScroll($event);">
+        <div class="body" >
+            <div class="background" >
                 <img src="assets/blob-small.svg" alt="" class="leftCircle">
                 <img src="assets/circle.svg" alt="" class="rightCircle">
                 <img src="assets/accounting_dots.svg" alt="" class="leftDots">
@@ -19,6 +20,7 @@
                     <button mat-button class="getStarted">Get Started</button>
                 </div>
             </div>
-        <app-first-body></app-first-body>
+        <app-first-body style="height: 100vh;" ></app-first-body>
         <app-second-body></app-second-body>
+        </div>
 </div>

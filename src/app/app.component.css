@@ -1,9 +1,14 @@
 .appBody{
-    overflow-x: hidden;
-    width: 100vw;
+    /* overflow-x: hidden; */
+    width: 100%;
     height: 100vh;
+    position: absolute;
+    /* overflow-y: scroll; */
+}
+.body{
+    width: 100%;
+    height: 100%;
     position: relative;
-    overflow-y: scroll;
 }
 
 .leftCircle{
@@ -18,7 +23,7 @@
 .rightCircle{
     top: -25%;
     left: 35%;
-    width: 71%;
+    width: 65%;
     right: 0;
     position: absolute;
     z-index: -1;
@@ -49,6 +54,7 @@
     z-index: -1;
     top: 850px;
     left: 0.0001220703125px;
+    width: 100%
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -60,6 +66,10 @@
     padding: 0px 10px 0px 35px;
     z-index: 999;
     position: sticky;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
 }
 
 .logo{
@@ -132,6 +142,7 @@ p:hover{
     z-index: 999;
     width: 100%;
     position: fixed;
+    top: 0;
     background-color: #fff;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
 }

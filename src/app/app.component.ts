@@ -9,19 +9,15 @@ export class AppComponent {
   title = 'assignment';
   headerChange = false;
 
-  @HostListener('mousewheel', ['$event']) onMouseWheelChrome(event) {
-      // console.log(event)
-        this.headerChange = true;
-    }
-  
-    @HostListener('DOMMouseScroll', ['$event']) onMouseWheelFirefox(event: any) {
-        this.headerChange = true;
-    }
-  
-    @HostListener('onmousewheel', ['$event']) onMouseWheelIE(event: any) {
-        this.headerChange = true;
-    }
-    @HostListener('document:scroll') onmouseover() {
-      console.log('over')
-    }
+    @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    // this.headerChange = true;
+    console.log('window>>', this.headerChange);
+     if (window.pageYOffset > 50) {
+      this.headerChange = true;
+     } else {
+      this.headerChange = false;
+      console.log('window>>', window.pageYOffset);
+     }
+  }
 }
